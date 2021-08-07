@@ -10,5 +10,5 @@ variable resource_type {
 
 variable metric_filter {
   type        = list(string) 
-  description = "Name of the resource type relevent to the alarm"
+  description = "Syntax of metric filter"
 }
