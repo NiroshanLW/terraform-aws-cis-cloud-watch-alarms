@@ -16,7 +16,7 @@ resource "aws_sns_topic" "cis_cloudwatch_alarm" {
 resource "aws_sns_topic_subscription" "cis_cloudwatch_alarm_target" {
   topic_arn = aws_sns_topic.cis_cloudwatch_alarm.arn
   protocol  = "email"
-  endpoint  = "AWS-CloudWatch-Notification@brandix.com"
+  endpoint  = "AWSCW-Notification@XXXX.com"
 }
 
 # Configure a log metric filter 
