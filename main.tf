@@ -5,17 +5,6 @@ provider "aws" {
   region  = "ap-southeast-1"
 }
 
-# Define local variables
-
-locals {
-  common_tags = {
-    Owner_Name       = "niroshanw"
-    Line_of_Business = "network"
-    Application_Name = "sandbox"
-    Enviroment_Name  = "prod"
-  }
-} 
-
 # Configure SNS Topic
 resource "aws_sns_topic" "cis_cloudwatch_alarm" {
   name         = "cis-cloudwatch-alarm"
