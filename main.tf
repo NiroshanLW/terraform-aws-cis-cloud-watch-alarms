@@ -16,7 +16,7 @@ resource "aws_sns_topic" "cis_cloudwatch_alarm" {
 resource "aws_sns_topic_subscription" "cis_cloudwatch_alarm_target" {
   topic_arn = aws_sns_topic.cis_cloudwatch_alarm.arn
   protocol  = "email"
-  endpoint  = "AWSCW-Notification@XXXX.com"
+  endpoint  = "AWS-CloudWatch-XXXXX@XXXXX.com"
 }
 
 # Configure a log metric filter 
@@ -43,7 +43,7 @@ resource "aws_cloudwatch_metric_alarm" "cis_metric_alarm" {
   evaluation_periods        = "1"
   metric_name               =  aws_cloudwatch_log_metric_filter.cis_metric_filter[count.index].metric_transformation[0].name
   namespace                 =  aws_cloudwatch_log_metric_filter.cis_metric_filter[count.index].metric_transformation[0].namespace   
-  period                    = "120"
+  period                    = "60"
   statistic                 = "Sum"
   threshold                 = "1"
   alarm_description         = "This metric monitors ${var.resource_type[count.index]} changes"
