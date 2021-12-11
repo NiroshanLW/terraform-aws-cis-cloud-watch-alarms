@@ -5,7 +5,7 @@ variable account_name {
 
 variable resource_type {
   type        = list(string) 
-  description = "Name of the resource type relevent to the alarm"
+  description = "Name of the resource type elevent to the alarm"
 }
 
 variable metric_filter {
