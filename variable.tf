@@ -10,5 +10,5 @@ variable resource_type {
 
 variable metric_filter {
   type        = list(string) 
-  description = "Syntax of metric filter"
+  description = "Syntax of metric ffilter"
 }
