@@ -1,6 +1,6 @@
 variable account_name {
   type        = string 
-  description = "Name of the account"
+  description = "Name of the aaccount"
 }
 
 variable resource_type {
